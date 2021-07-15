@@ -13,7 +13,7 @@ public class ClaseProperties {
         InputStream input = null;
 
         try {
-            input = new FileInputStream("C:\\Users\\justb\\Desktop\\MegaSync\\Z_JAVA_PROJECTS\\Testing Automation\\src\\setup.properties");
+            input = new FileInputStream("C:\\Users\\justb\\Desktop\\MegaSync\\Z_JAVA_PROJECTS\\TrabajoPOM_clavo\\src\\setup.properties");
             prop.load(input);
 
         } catch (Exception e) {

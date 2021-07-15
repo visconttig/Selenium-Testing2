@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utilidades.ClaseBase;
 
+import java.util.regex.Pattern;
+
 public class HomePage extends ClaseBase {
     //aca centralizaremos los locators
     By botonCambiate = By.cssSelector("a.invitacion");
@@ -61,8 +63,9 @@ public class HomePage extends ClaseBase {
         hacerClick(esperarPorclickearElemento(botonEnviar));
     }
 
-    public String obtenerMensajeEnvioExitoso() {
-        esperarXsegundos(1000);
+    public String obtenerMensajeEnvioExitoso(Pattern pattern) {
+        //esperarXsegundos(1000);
+        esperaTextPattern(textoResultado, pattern);
         return obtenerTexto(esperarPorPresenciaDelElemento(textoResultado));
     }
 

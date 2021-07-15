@@ -65,7 +65,8 @@ public class CasosDePrueba {
 
         homePage.clickEnviarFormulario();
 
-        String resultado = homePage.obtenerMensajeEnvioExitoso();
+        Pattern patternEsperado = Pattern.compile(resultadoEsperado);
+        String resultado = homePage.obtenerMensajeEnvioExitoso(patternEsperado);
         Assert.assertEquals(resultado, resultadoEsperado);
 
     }
